@@ -1,0 +1,20 @@
+/* Empty. Add your own CSS if you like */
+
+.complete {
+  color: #ccc;
+  text-decoration: line-through;
+}
+
+.straighten {
+  display: flex;
+  align-items: center;
+}
+
+.my-button {
+  margin-top: 10px;
+}
+
+.justin-item {
+  padding-left: 15px;
+}
+

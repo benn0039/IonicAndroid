@@ -1,0 +1,26 @@
+<ion-view view-title="Personal Tasks">
+  <ion-content>
+    <div class="list">
+      <form name="addItem" ng-submit="addItem.$valid && add(task)" novalidate>
+        <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <input type="text" placeholder="Enter Todo Item Here" ng-model="task.descrip" required>
+          </label>
+          <button class="button button-small button-positive" type="submit">
+            Add...
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <ul class="list">
+      <li class="item item-button-right straighten" ng-class="{complete: item.done == true}" ng-repeat="item in personalList track by $index" >
+        <label class="checkbox">
+          <input type="checkbox" ng-model="item.done" ng-change="updateLocalStorage()">
+        </label>
+        {{item.item}}
+        <button class="button my-button button-small button-assertive" ng-show="item.done == true" ng-click="del($index)">Delete</button>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
